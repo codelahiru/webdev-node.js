@@ -22,7 +22,7 @@ class Person {
     }
 
     greeting(){
-        console.log(`My name is ${this.name} and I'm ${this.age} years old`)
+        console.log(`My name is ${this.name} and I'm ${this.age} years of age`)
     }
 }
 
