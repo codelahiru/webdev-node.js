@@ -1,4 +1,4 @@
-const EventEmitter = require('events');
+const EventEmitter = require('node:events');
 
 // create class
 class MyEmitter extends EventEmitter {}
@@ -10,6 +10,9 @@ const myEmitter = new MyEmitter();
 myEmitter.on('event', () => console.log('Event Fired!'));
 
 // init event
+myEmitter.emit('event');
+myEmitter.emit('event');
+myEmitter.emit('event');
 myEmitter.emit('event');
 
 
