@@ -1,21 +1,17 @@
-// //console.log("Hello from Node.js!");
+const http = require('http');
+const path = require('path');
+const fs = require('fs');
 
-// const Person = require('./person');
 
-// // Instantiate
+const server =  http.createServer((req, res) => {
+    console.log(req.url);
+});
 
-// const person1 = new Person('John Doe', 30);
+const PORT = process.env.PORT || 5000;
 
-// person1.greeting();
-
-const Logger = require('./logger');
-
-const logger = new Logger();    // Instantiation
-
-logger.on('message', data => console.log('Called listener ', data));
-
-logger.log('Hello World');
-
+server.listen(PORT, () => {
+    console.log(`Server running on ${PORT}`);
+});
 
 
 
